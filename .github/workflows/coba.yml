@@ -9,7 +9,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14' # Gunakan versi Node.js yang valid di sini
+          node-version: '20' # Gunakan versi Node.js yang valid di sini
       - name: Install dependencies
         run: npm install
       - name: Run tests
@@ -34,4 +34,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: alamrulam/coba-action:latest
+          tags: alamruslam/coba-action:latest
