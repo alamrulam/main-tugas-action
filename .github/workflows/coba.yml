@@ -12,7 +12,7 @@ jobs:
       - run: npm install 
       - run: npm run test
 
-  push_to_registy:
+  push_to_registry:
   name: Push Docker image to Docker Hub
   runs-on: ubuntu-latest
   steps:
