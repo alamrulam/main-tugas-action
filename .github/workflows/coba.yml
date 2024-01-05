@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: alamrulam/coba-action:latest
+          tags: alamrulam/learn-action:latest
