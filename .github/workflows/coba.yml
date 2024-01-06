@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: main-tugas-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: alamrulam/learn-action:latest
+          tags: alamrulam/main-tugas-action:latest
