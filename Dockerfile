@@ -1,15 +1,11 @@
-FROM node:20-alpine as stage
+FROM node:20.10.0-alpine as base
 
 WORKDIR /src/app
 COPY . .
-
 RUN npm install
-RUN npm run build
+RUN npm run pkg
 
-FROM node:20-alpine
+FROM alpine:3.18
 
-WORKDIR /src/app
-
-COPY --from=stage /src/app/dist ./dist
-
-CMD [ "node", "dist/main.js"]
+COPY --from=base /src/app/.bin/main-tugas-action /usr/local/bin/main-tugas-action
+CMD [ "main-tugas-action" ]
